@@ -20,6 +20,12 @@ export default defineConfig({
   server: {
     hmr: false,
   },
+  worker: {
+    format: "es",
+  },
+  build: {
+    target: "es2022",
+  },
   optimizeDeps: {
     exclude: ["voice2text"],
   },

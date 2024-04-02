@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-// import crossOriginIsolation from "vite-plugin-cross-origin-isolation";
 
 const crossOriginIsolation = () => ({
   name: "configure-server",

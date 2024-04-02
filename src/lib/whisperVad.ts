@@ -27,9 +27,10 @@ export async function* transcribeMicrophone(
 
   // Start the speech recognition
   const vad = await MicVAD.new({
-    modelURL: "/node_modules/@ricky0123/vad-web/dist/silero_vad.onnx",
+    modelURL:
+      "https://cdn.jsdelivr.net/npm/@ricky0123/vad-web@0.0.17/dist/silero_vad.onnx",
     workletURL:
-      "/node_modules/@ricky0123/vad-web/dist/vad.worklet.bundle.min.js",
+      "https://cdn.jsdelivr.net/npm/@ricky0123/vad-web@0.0.17/dist/vad.worklet.bundle.min.js",
     onSpeechEnd: async (audio) => {
       console.log("[VAD] Detected speech end");
       const result = await createTranscription({
